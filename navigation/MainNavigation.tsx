@@ -6,15 +6,19 @@ import { NavigationContainer } from "@react-navigation/native";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { Ionicons } from "@expo/vector-icons";
 // screens
-import HomeScreen from "./screens/HomeScreen";
 import SettingsScreen from "./screens/SettingsScreen";
-import DetailScreen from "./screens/DetailScreen";
+import SearchScreen from "./screens/SearchScreen";
+import HomeScreen from "./screens/HomeScreen";
+import DetailStack from "./stacked/DetailStack";
+import { Header, createStackNavigator } from "@react-navigation/stack";
+import MainStack from "./stacked/MainStack";
 
 const homeName = "Home";
 const settingsName = "Settings";
-const detailsName = "Details";
+const searchName = "Search";
 
 const Tab = createBottomTabNavigator();
+const Stack = createStackNavigator();
 
 export default function MainNavigation() {
   return (
@@ -28,7 +32,7 @@ export default function MainNavigation() {
               iconName = focused ? "ios-home" : "ios-home-outline";
             } else if (route.name === settingsName) {
               iconName = focused ? "ios-settings" : "ios-settings-outline";
-            } else if (route.name === detailsName) {
+            } else if (route.name === searchName) {
               iconName = focused ? "ios-search" : "ios-search-outline";
             }
 
@@ -46,8 +50,12 @@ export default function MainNavigation() {
           },
         }}
       >
-        <Tab.Screen name={homeName} component={HomeScreen} />
-        <Tab.Screen name={detailsName} component={DetailScreen} />
+        <Tab.Screen
+          name={homeName}
+          options={{ headerShown: false }}
+          component={MainStack}
+        />
+        <Tab.Screen name={searchName} component={SearchScreen} />
         <Tab.Screen name={settingsName} component={SettingsScreen} />
       </Tab.Navigator>
     </NavigationContainer>
