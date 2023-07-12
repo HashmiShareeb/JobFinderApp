@@ -20,7 +20,15 @@ export default () => {
         }}
         component={HomeScreen}
       />
-      <Stack.Screen name="Details" component={DetailsScreen} />
+      <Stack.Screen
+        name="Details"
+        component={DetailsScreen}
+        options={{
+          headerShown: true,
+          headerTitle: "Detail",
+          headerTitleAlign: "center",
+        }}
+      />
     </Stack.Navigator>
   );
 };

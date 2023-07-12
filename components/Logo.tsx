@@ -5,7 +5,7 @@ export default () => {
   return (
     <VStack>
       <Heading
-        color={"orange.400"}
+        color={"dark.200"}
         fontSize={"2xl"}
         fontWeight={"semibold"}
         mx={5}
