@@ -6,8 +6,8 @@ import PopulairJobs from "../../components/PopulairJobs";
 
 export default ({ navigation }: { navigation: any }) => {
   return (
-    <Box safeArea>
-      <ScrollView>
+    <Box>
+      <ScrollView showsHorizontalScrollIndicator={false}>
         <VStack p={2} m={4}>
           <Welcome />
           <PopulairJobs />

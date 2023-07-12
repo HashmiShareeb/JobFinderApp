@@ -4,9 +4,11 @@ import React from "react";
 export default () => {
   return (
     <View>
-      <Heading color="orange.600" fontWeight="light" size="xl">
-        Find your ideal job
-      </Heading>
+      <VStack width={"100%"}>
+        <Heading color="orange.600" fontWeight="semibold" size="lg">
+          Find your ideal job
+        </Heading>
+      </VStack>
     </View>
   );
 };

@@ -63,6 +63,7 @@ export default () => {
         value={searchText}
         onChangeText={(text) => setSearchText(text)}
         onSubmitEditing={handleSearch}
+        blurOnSubmit={true} // Add this line to dismiss the keyboard on submit
       />
       {searchText.length > 0 && (
         <TouchableOpacity onPress={handleCancel}>

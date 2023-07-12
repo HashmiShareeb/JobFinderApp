@@ -6,6 +6,7 @@ import SettingsScreen from "../screens/SettingsScreen";
 import DetailStack from "./DetailStack";
 import React from "react";
 import { NavigationContainer } from "@react-navigation/native";
+import Logo from "../../components/Logo";
 
 const Stack = createStackNavigator();
 
@@ -14,7 +15,12 @@ export default () => {
     <Stack.Navigator>
       <Stack.Screen
         name="Overview"
-        options={{ headerShown: false }}
+        options={{
+          headerShown: true,
+          headerShadowVisible: false,
+          headerTitle: "",
+          headerLeft: () => <Logo />,
+        }}
         component={HomeScreen}
       />
       <Stack.Screen name="Details" component={DetailStack} />
