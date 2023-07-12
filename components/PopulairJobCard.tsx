@@ -8,16 +8,20 @@ import { Job } from "../Interface/Jobs";
 
 export default ({ item }: { item: Job }) => {
   const navigation = useNavigation();
+  const handlePress = () => {
+    //@ts-ignore
+    navigation.navigate("Details", { jobId: item.id });
+  };
   return (
     <TouchableOpacity
       style={jobcards.container}
       //   key={item.job_id}
       //   onPress={() => handleJobPopulairPress(item.job_id)}
-      onPress={() => navigation.navigate("Details", { job: item.id })}
+      onPress={handlePress}
     >
       <TouchableOpacity style={jobcards.logoContainer}>
         <Image
-          alt="image base"
+          alt="company logo"
           source={{
             uri: "https://t4.ftcdn.net/jpg/05/05/61/73/360_F_505617309_NN1CW7diNmGXJfMicpY9eXHKV4sqzO5H.jpg",
           }}
