@@ -14,7 +14,9 @@ export default ({ navigation, route }: { navigation: any; route: any }) => {
         width={50}
         height={50}
         source={{
-          uri: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Google_%22G%22_Logo.svg/1024px-Google_%22G%22_Logo.svg.png",
+          uri: job.logo
+            ? job.logo
+            : "https://t4.ftcdn.net/jpg/05/05/61/73/360_F_505617309_NN1CW7diNmGXJfMicpY9eXHKV4sqzO5H.jpg",
         }}
         alt="Job Image"
         resizeMode="contain"
@@ -29,8 +31,10 @@ export default ({ navigation, route }: { navigation: any; route: any }) => {
         <Text fontSize="sm" marginBottom={2}>
           {job.location}
         </Text>
-        <Text fontSize="md">Job Description</Text>
-        <Text fontSize="md">{job.description}</Text>
+        <Text fontSize="md" fontWeight={"bold"}>
+          About the job
+        </Text>
+        <Text fontSize="md">{job.applicationRequirements}</Text>
       </VStack>
       <Button width="80%" marginBottom={4} onPress={handleApply}>
         Apply

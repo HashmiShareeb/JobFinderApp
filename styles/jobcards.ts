@@ -26,7 +26,7 @@ export default StyleSheet.create({
     alignItems: "center",
     borderRadius: 16,
   },
-  logo: { width: "100%", height: "100%" },
+  logo: { width: "70%", height: "70%" },
   companyName: {
     fontSize: 16,
     fontWeight: "bold",

@@ -29,7 +29,7 @@ const jobsData = [
       "Join our dynamic frontend development team and build amazing user interfaces...",
     company_name: "Google LLC",
     location: "Mountain View, CA",
-    logo: "https://example.com/google-logo.png",
+    logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Google_%22G%22_Logo.svg/1024px-Google_%22G%22_Logo.svg.png",
     applicationRequirements: [
       "Proficiency in HTML, CSS, and JavaScript",
       "Experience with React and state management libraries",
@@ -189,7 +189,6 @@ export default () => {
           {/* search job */}
           <ScrollView horizontal={true} showsHorizontalScrollIndicator={false}>
             {jobsData.map((job) => (
-              
               // <TouchableOpacity
               //   style={jobcards.container}
               //   key={job.id}
