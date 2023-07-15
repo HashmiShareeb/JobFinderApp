@@ -156,7 +156,7 @@ const error = false;
 export default () => {
   const navigation = useNavigation();
   return (
-    <VStack my={4}>
+    <VStack my={2}>
       <View>
         <Heading
           flexDirection={"row"}
@@ -189,6 +189,7 @@ export default () => {
           {/* search job */}
           <ScrollView horizontal={true} showsHorizontalScrollIndicator={false}>
             {jobsData.map((job) => (
+              
               // <TouchableOpacity
               //   style={jobcards.container}
               //   key={job.id}

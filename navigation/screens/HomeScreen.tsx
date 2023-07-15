@@ -10,8 +10,8 @@ export default ({ navigation }: { navigation: any }) => {
   return (
     <Box>
       <ScrollView showsHorizontalScrollIndicator={false}>
-        <VStack p={2} m={4}>
-          {/* <Welcome /> */}
+        <VStack p={2} m={2}>
+          <Welcome />
           <PopulairJobs />
           <AvaliableJobs />
           <Text onPress={() => navigation.navigate("Details")}>Details</Text>

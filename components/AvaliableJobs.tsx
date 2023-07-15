@@ -149,6 +149,8 @@ export default () => {
     // Add more job objects here
   ];
   const navigation = useNavigation();
+  const randomizedJobs = jobsData.sort(() => Math.random() - 0.5);
+
   return (
     <View>
       <Heading
@@ -161,7 +163,7 @@ export default () => {
       </Heading>
       <VStack>
         <ScrollView>
-          {jobsData.map((job) => (
+          {randomizedJobs.map((job) => (
             <TouchableOpacity
               style={jobcards.containerAvailable}
               key={job.id}

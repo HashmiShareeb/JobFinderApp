@@ -10,7 +10,7 @@ export default ({ item }: { item: Job }) => {
   const navigation = useNavigation();
   const handlePress = () => {
     //@ts-ignore
-    navigation.navigate("Details", { jobId: item.id });
+    navigation.navigate("Details", { job: item });
   };
   return (
     <TouchableOpacity
