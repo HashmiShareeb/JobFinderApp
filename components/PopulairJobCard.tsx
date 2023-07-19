@@ -5,6 +5,7 @@ import { VStack, Text } from "native-base";
 import jobcards from "../styles/jobcards";
 import { useNavigation } from "@react-navigation/native";
 import { Job } from "../Interface/Jobs";
+import { SvgUri } from "react-native-svg";
 
 export default ({ item }: { item: Job }) => {
   const navigation = useNavigation();

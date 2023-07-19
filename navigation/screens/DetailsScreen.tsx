@@ -1,4 +1,4 @@
-import { Button, Image, VStack, Text } from "native-base";
+import { Button, Image, VStack, Text, HStack, Center } from "native-base";
 import * as React from "react";
 import { View } from "react-native";
 
@@ -22,17 +22,24 @@ export default ({ navigation, route }: { navigation: any; route: any }) => {
         resizeMode="contain"
       />
       <VStack padding={4}>
-        <Text fontWeight="bold" fontSize="xl" marginBottom={2}>
+        <Text
+          fontWeight="bold"
+          fontSize="xl"
+          marginBottom={2}
+          textAlign={"center"}
+        >
           {job.title}
         </Text>
-        <Text fontSize="md" marginBottom={2}>
-          {job.company_name}
-        </Text>
-        <Text fontSize="sm" marginBottom={2}>
-          {job.location}
-        </Text>
-        <Text fontSize="md" fontWeight={"bold"}>
-          About the job
+        <HStack space={2} margin={"auto"} alignItems={"center"}>
+          <Text fontSize="md" marginBottom={2}>
+            {job.company_name}
+          </Text>
+          <Text fontSize="sm" marginBottom={2}>
+            {job.location}
+          </Text>
+        </HStack>
+        <Text fontSize="md" fontWeight={"bold"} textTransform={"capitalize"}>
+          description
         </Text>
         <Text fontSize="md">{job.applicationRequirements}</Text>
       </VStack>

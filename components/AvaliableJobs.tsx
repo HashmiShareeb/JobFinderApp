@@ -1,4 +1,4 @@
-import { Heading, ScrollView, VStack } from "native-base";
+import { Heading, ScrollView, VStack, Image } from "native-base";
 import react from "react";
 import { View, Text, TouchableOpacity } from "react-native";
 import jobcards from "../styles/jobcards";
@@ -13,7 +13,7 @@ export default () => {
         "We are seeking a skilled Software Engineer to join our development team...",
       company_name: "Apple Inc.",
       location: "Cupertino, CA",
-      logo: "https://example.com/apple-logo.png",
+      logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Apple_logo_black.svg/1920px-Apple_logo_black.svg.png",
       applicationRequirements: [
         "Bachelor's degree in Computer Science or related field",
         "Strong proficiency in JavaScript and modern frameworks",
@@ -27,7 +27,7 @@ export default () => {
         "Join our dynamic frontend development team and build amazing user interfaces...",
       company_name: "Google LLC",
       location: "Mountain View, CA",
-      logo: "https://example.com/google-logo.png",
+      logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Google_%22G%22_Logo.svg/1024px-Google_%22G%22_Logo.svg.png",
       applicationRequirements: [
         "Proficiency in HTML, CSS, and JavaScript",
         "Experience with React and state management libraries",
@@ -41,7 +41,7 @@ export default () => {
         "We are looking for a talented Data Scientist to analyze and interpret complex data...",
       company_name: "Microsoft Corporation",
       location: "Redmond, WA",
-      logo: "https://example.com/microsoft-logo.png",
+      logo: "",
       applicationRequirements: [
         "Master's or Ph.D. degree in Data Science or related field",
         "Proficiency in statistical analysis and machine learning techniques",
@@ -69,7 +69,7 @@ export default () => {
         "We are seeking an experienced Product Manager to drive product strategy...",
       company_name: "Amazon.com, Inc.",
       location: "Seattle, WA",
-      logo: "https://example.com/amazon-logo.png",
+      logo: "https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg.png",
       applicationRequirements: [
         "Proven track record of successfully launching products",
         "Strong analytical and problem-solving skills",
@@ -83,7 +83,7 @@ export default () => {
         "Join our backend engineering team and build scalable server applications...",
       company_name: "Netflix, Inc.",
       location: "Los Gatos, CA",
-      logo: "https://example.com/netflix-logo.png",
+      logo: "",
       applicationRequirements: [
         "Proficiency in server-side programming languages (e.g., Java, Python)",
         "Experience with distributed systems and microservices architecture",
@@ -97,7 +97,7 @@ export default () => {
         "We are looking for a detail-oriented Data Analyst to extract insights from data...",
       company_name: "Facebook, Inc.",
       location: "Menlo Park, CA",
-      logo: "https://example.com/facebook-logo.png",
+      logo: "https://upload.wikimedia.org/wikipedia/commons/c/cd/Facebook_logo_%28square%29.png",
       applicationRequirements: [
         "Strong SQL skills and experience with data querying",
         "Proficiency in data visualization tools (e.g., Tableau, Power BI)",
@@ -139,7 +139,7 @@ export default () => {
         "Join our AI research team and contribute to cutting-edge machine learning algorithms...",
       company_name: "IBM Corporation",
       location: "New York, NY",
-      logo: "https://example.com/ibm-logo.png",
+      logo: "https://upload.wikimedia.org/wikipedia/commons/5/51/IBM_logo.svg",
       applicationRequirements: [
         "Ph.D. degree in Computer Science or related field",
         "Expertise in machine learning, deep learning, and statistical modeling",
@@ -169,6 +169,15 @@ export default () => {
               key={job.id}
               onPress={() => navigation.navigate("Details", { job })}
             >
+              {/* <Image
+                source={{ uri: job.logo }} // Assuming "logo" property contains the image URI
+                alt={job.title} // Alt text for the image
+                resizeMode="contain"
+                mt={8}
+                width={50}
+                height={50}
+              /> */}
+
               <Heading color={"dark.100"} fontWeight={"medium"} fontSize={"md"}>
                 {job.title}
               </Heading>
