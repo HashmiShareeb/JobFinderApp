@@ -14,7 +14,6 @@ export default ({ navigation }: { navigation: any }) => {
           <Welcome />
           <PopulairJobs />
           <AvaliableJobs />
-          <Text onPress={() => navigation.navigate("Details")}>Details</Text>
         </VStack>
       </ScrollView>
     </Box>

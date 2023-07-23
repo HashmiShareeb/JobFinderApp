@@ -6,7 +6,7 @@ export default StyleSheet.create({
     width: 250,
     justifyContent: "space-between",
     backgroundColor: "#fff",
-    borderRadius: 10,
+    borderRadius: 6,
     padding: 10,
     margin: 10,
   },
