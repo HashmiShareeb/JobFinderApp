@@ -8,35 +8,8 @@ import {
 } from "react-native";
 import searchInput from "../../styles/searchInput";
 import { VStack } from "native-base";
-
-// JSON data
-const jobsData = [
-  {
-    id: 1,
-    title: "Software Engineer",
-    description:
-      "We are seeking a skilled Software Engineer to join our development team...",
-    company: "Apple Inc.",
-    logo: "https://example.com/apple-logo.png",
-  },
-  {
-    id: 2,
-    title: "Frontend Developer",
-    description:
-      "Join our dynamic frontend development team and build amazing user interfaces...",
-    company: "Google LLC",
-    logo: "https://example.com/google-logo.png",
-  },
-  {
-    id: 3,
-    title: "Data Scientist",
-    description:
-      "We are looking for a talented Data Scientist to analyze and interpret complex data...",
-    company: "Microsoft Corporation",
-    logo: "https://example.com/microsoft-logo.png",
-  },
-  // Add more job objects here
-];
+//import json
+import jobsData from "../../assets/data/jobs.json";
 
 export default () => {
   const [searchText, setSearchText] = useState("");

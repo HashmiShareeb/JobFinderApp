@@ -5,6 +5,7 @@ import PopulairJobCard from "./PopulairJobCard";
 import { useNavigation } from "@react-navigation/native";
 //import json file
 import jobsData from "../assets/data/jobs.json";
+import theme from "../styles/theme";
 
 const isLoading = false;
 const error = false;
@@ -55,7 +56,11 @@ export default () => {
               //   </Heading>
               //   <Text numberOfLines={1}>{job.location}</Text>
               // </TouchableOpacity>
-              <PopulairJobCard key={job.id} item={job} />
+              <PopulairJobCard
+                key={job.id}
+                item={job}
+               
+              />
             ))}
           </ScrollView>
         </VStack>

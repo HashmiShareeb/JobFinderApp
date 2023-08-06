@@ -12,10 +12,11 @@ import HomeScreen from "./screens/HomeScreen";
 import DetailStack from "./stacked/DetailStack";
 import { Header, createStackNavigator } from "@react-navigation/stack";
 import MainStack from "./stacked/MainStack";
+import BookmarksScreen from "./screens/BookmarksScreen";
 
 const homeName = "Home";
-const settingsName = "Settings";
 const searchName = "Search";
+const savedName = "Bookmarks";
 
 const Tab = createBottomTabNavigator();
 const Stack = createStackNavigator();
@@ -30,10 +31,10 @@ export default function MainNavigation() {
             let iconName: string = "";
             if (route.name === homeName) {
               iconName = focused ? "ios-home" : "ios-home-outline";
-            } else if (route.name === settingsName) {
-              iconName = focused ? "ios-settings" : "ios-settings-outline";
             } else if (route.name === searchName) {
               iconName = focused ? "ios-search" : "ios-search-outline";
+            } else if (route.name === "Bookmarks") {
+              iconName = focused ? "ios-bookmark" : "ios-bookmark-outline";
             }
 
             // Add a fallback value in case iconName is empty or undefined
@@ -56,7 +57,8 @@ export default function MainNavigation() {
           component={MainStack}
         />
         <Tab.Screen name={searchName} component={SearchScreen} />
-        <Tab.Screen name={settingsName} component={SettingsScreen} />
+        {/* <Tab.Screen name={settingsName} component={SettingsScreen} /> */}
+        <Tab.Screen name={savedName} component={BookmarksScreen} />
       </Tab.Navigator>
     </NavigationContainer>
   );

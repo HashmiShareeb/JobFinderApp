@@ -2,8 +2,10 @@ import react from "react";
 import { createStackNavigator } from "@react-navigation/stack";
 import HomeScreen from "../screens/HomeScreen";
 import React from "react";
-import Logo from "../../components/Logo";
+import Logo from "../../components/topbar/Logo";
 import DetailsScreen from "../screens/DetailsScreen";
+import Search from "../../components/topbar/Search";
+import SettingsStack from "./SettingsStack";
 
 const Stack = createStackNavigator();
 
@@ -17,6 +19,8 @@ export default () => {
           headerShadowVisible: false,
           headerTitle: "",
           headerLeft: () => <Logo />,
+          //define navigation prop
+          headerRight: () => <Search />,
         }}
         component={HomeScreen}
       />
@@ -26,6 +30,15 @@ export default () => {
         options={{
           headerShown: true,
           headerTitle: "Detail",
+          headerTitleAlign: "center",
+        }}
+      />
+      <Stack.Screen
+        name="settings"
+        component={SettingsStack}
+        options={{
+          headerShown: true,
+          headerTitle: "Settings",
           headerTitleAlign: "center",
         }}
       />
