@@ -6,6 +6,7 @@ import jobcards from "../styles/jobcards";
 import { useNavigation } from "@react-navigation/native";
 import { Job } from "../Interface/Jobs";
 import { SvgUri } from "react-native-svg";
+import theme from "../styles/theme";
 
 export default ({ item }: { item: Job }) => {
   const navigation = useNavigation();
@@ -15,7 +16,7 @@ export default ({ item }: { item: Job }) => {
   };
   return (
     <TouchableOpacity
-      style={jobcards.container}
+      style={[jobcards.container, theme.bgDarkCard]}
       //   key={item.job_id}
       //   onPress={() => handleJobPopulairPress(item.job_id)}
       onPress={handlePress}
@@ -36,11 +37,12 @@ export default ({ item }: { item: Job }) => {
         />
       </TouchableOpacity>
       {/* numberofline --> make longer texts fit in one line */}
-      <Text style={jobcards.companyName} numberOfLines={1}>
+      <Text style={[jobcards.companyName, theme.textWhite]} numberOfLines={1}>
         {item.company_name}
       </Text>
       <VStack space={2}>
         <Text
+          style={theme.textWhite}
           fontSize="md"
           mt={2}
           isTruncated
@@ -50,7 +52,9 @@ export default ({ item }: { item: Job }) => {
         >
           {item.title}
         </Text>
-        <Text numberOfLines={1}>{item.location}</Text>
+        <Text numberOfLines={1} color={"gray.400"}>
+          {item.location}
+        </Text>
       </VStack>
     </TouchableOpacity>
   );

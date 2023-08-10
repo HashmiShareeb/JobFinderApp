@@ -27,6 +27,37 @@ export default function MainNavigation() {
       <Tab.Navigator
         initialRouteName={homeName}
         screenOptions={({ route }) => ({
+          tabBarInactiveTintColor: "black", //inactive icon color
+          tabBarActiveTintColor: "white", //active icon color
+          tabBarShowLabel: false, //hide the labels in the bottom tab bar
+          tabBarStyle: {
+            //set the background color for the tab bar
+            backgroundColor: "tomato",
+          },
+          labelStyle: {
+            paddingBottom: 10,
+          },
+
+          tabBarIcon: ({ focused, color, size }) => {
+            let iconName: string = "";
+            if (route.name === homeName) {
+              iconName = focused ? "ios-home" : "ios-home-outline";
+            } else if (route.name === searchName) {
+              iconName = focused ? "ios-search" : "ios-search-outline";
+            } else if (route.name === "Bookmarks") {
+              iconName = focused ? "ios-bookmark" : "ios-bookmark-outline";
+            }
+
+            // Add a fallback value in case iconName is empty or undefined
+            iconName = iconName || "default-icon";
+
+            return <Ionicons name={iconName} size={size} color={color} />;
+          },
+        })}
+      >
+        {/* <Tab.Navigator
+        initialRouteName={homeName}
+        screenOptions={({ route }) => ({
           tabBarIcon: ({ focused, color, size }) => {
             let iconName: string = "";
             if (route.name === homeName) {
@@ -49,8 +80,11 @@ export default function MainNavigation() {
           labelStyle: {
             paddingBottom: 10,
           },
+          style: {
+            backgroundColor: "red", // Set the desired background color
+          },
         }}
-      >
+      > */}
         <Tab.Screen
           name={homeName}
           options={{ headerShown: false }}

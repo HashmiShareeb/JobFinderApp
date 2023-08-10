@@ -5,6 +5,7 @@ import jobcards from "../styles/jobcards";
 import { useNavigation } from "@react-navigation/native";
 import JobList from "../styles/JobList";
 import jobsData from "../assets/data/jobs.json";
+import theme from "../styles/theme";
 
 export default () => {
   const navigation = useNavigation();
@@ -24,7 +25,7 @@ export default () => {
         <ScrollView>
           {randomizedJobs.map((job) => (
             <TouchableOpacity
-              style={JobList.container}
+              style={[JobList.container, theme.bgDarkCard]}
               key={job.id}
               //@ts-ignore
               onPress={() => navigation.navigate("Details", { job })}
@@ -39,15 +40,15 @@ export default () => {
               /> */}
 
               <Heading
-                color={"dark.100"}
-                fontWeight={"semibold"}
+                style={theme.textWhite}
+                fontWeight={'regular'}
                 fontSize={"md"}
               >
                 {job.title}
               </Heading>
               <VStack flexDirection={"row"} mt={2}>
-                <Text numberOfLines={1} color={"gray.500"} fontWeight={"light"}>
-                  {job.company_name} - {job.type}
+                <Text numberOfLines={1} color={"gray.400"} fontWeight={"light"}>
+                  {job.company_name} -  {job.type}
                 </Text>
               </VStack>
             </TouchableOpacity>

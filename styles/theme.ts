@@ -4,11 +4,14 @@ export default StyleSheet.create({
   bgDark: {
     backgroundColor: "#000",
   },
-  bgDarkCard: {
-    backgroundColor: "#1F1B24",
+  headerandfooter: {
+    backgroundColor: "#28272C",
   },
-  lightText: {
-    backgroundColor: "#fff",
+  bgDarkCard: {
+    backgroundColor: "#1D1D1D",
+  },
+  textWhite: {
+    color: "#f1f1f3",
   },
   darkText: {
     backgroundColor: "#000",

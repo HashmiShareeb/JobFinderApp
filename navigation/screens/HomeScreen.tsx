@@ -5,10 +5,11 @@ import Welcome from "../../components/Welcome";
 import PopulairJobs from "../../components/PopulairJobs";
 import AvaliableJobs from "../../components/AvaliableJobs";
 import { DarkTheme } from "@react-navigation/native";
+import theme from "../../styles/theme";
 
 export default ({ navigation }: { navigation: any }) => {
   return (
-    <Box>
+    <Box style={theme.bgDark}>
       <ScrollView showsHorizontalScrollIndicator={false}>
         <VStack p={2} m={2}>
           <Welcome />
