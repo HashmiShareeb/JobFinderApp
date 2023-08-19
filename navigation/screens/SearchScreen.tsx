@@ -10,6 +10,7 @@ import searchInput from "../../styles/searchInput";
 import { VStack } from "native-base";
 //import json
 import jobsData from "../../assets/data/jobs.json";
+import theme from "../../styles/theme";
 
 export default () => {
   const [searchText, setSearchText] = useState("");
@@ -28,11 +29,12 @@ export default () => {
   };
 
   return (
-    <VStack p={3}>
+    <VStack p={3} style={theme.bgDark} flex={1}>
       <TextInput
-        style={searchInput.searchBar}
+        style={[searchInput.searchBar, theme.bgDarkCard, theme.textWhite]}
         // style={{ height: 40, borderColor: "gray", borderWidth: 1, padding: 10 }}
         placeholder="Search Jobs"
+        placeholderTextColor={"#666"}
         value={searchText}
         onChangeText={(text) => setSearchText(text)}
         onSubmitEditing={handleSearch}
@@ -40,7 +42,7 @@ export default () => {
       />
       {searchText.length > 0 && (
         <TouchableOpacity onPress={handleCancel}>
-          <Text>Cancel</Text>
+          <Text style={theme.textWhite}>Cancel</Text>
         </TouchableOpacity>
       )}
       <FlatList
@@ -48,8 +50,8 @@ export default () => {
         keyExtractor={(item) => item.id.toString()}
         renderItem={({ item }) => (
           <View>
-            <Text>{item.title}</Text>
-            <Text>{item.description}</Text>
+            <Text style={theme.textWhite}>{item.title}</Text>
+            <Text style={theme.textWhite}>{item.description}</Text>
           </View>
         )}
       />

@@ -1,5 +1,6 @@
 import { Button, Image, VStack, Text, HStack, Center } from "native-base";
 import * as React from "react";
+import theme from "../../styles/theme";
 
 export default ({ navigation, route }: { navigation: any; route: any }) => {
   const handleApply = () => {
@@ -10,7 +11,7 @@ export default ({ navigation, route }: { navigation: any; route: any }) => {
 
   const { job } = route.params;
   return (
-    <VStack flex={1} alignItems="center">
+    <VStack flex={1} alignItems="center" style={theme.bgDark}>
       {/* <Image
         mt={8}
         source={job.logo ? getLogoFromFileName(job.logo) : placeholderImage}
@@ -33,6 +34,7 @@ export default ({ navigation, route }: { navigation: any; route: any }) => {
 
       <VStack padding={4}>
         <Text
+          style={theme.textWhite}
           fontWeight="bold"
           fontSize="xl"
           marginBottom={2}
@@ -41,17 +43,24 @@ export default ({ navigation, route }: { navigation: any; route: any }) => {
           {job.title}
         </Text>
         <HStack space={2} margin={"auto"} alignItems={"center"}>
-          <Text fontSize="md" marginBottom={2}>
+          <Text fontSize="md" marginBottom={2} style={theme.textWhite}>
             {job.company_name}
           </Text>
-          <Text fontSize="sm" marginBottom={2}>
+          <Text fontSize="sm" marginBottom={2} style={theme.textWhite}>
             {job.location}
           </Text>
         </HStack>
-        <Text fontSize="md" fontWeight={"bold"} textTransform={"capitalize"}>
+        <Text
+          fontSize="md"
+          fontWeight={"bold"}
+          textTransform={"capitalize"}
+          style={theme.textWhite}
+        >
           description
         </Text>
-        <Text fontSize="md">{job.applicationRequirements}</Text>
+        <Text fontSize="md" style={theme.textWhite}>
+          {job.applicationRequirements}
+        </Text>
       </VStack>
       <Button width="80%" marginBottom={4} onPress={handleApply}>
         Apply

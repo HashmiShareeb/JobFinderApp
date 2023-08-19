@@ -29,6 +29,9 @@ export default function MainNavigation() {
         screenOptions={({ route }) => ({
           tabBarInactiveTintColor: "black", //inactive icon color
           tabBarActiveTintColor: "white", //active icon color
+          headerStyle :{
+            backgroundColor: "tomato",
+          },
           tabBarShowLabel: false, //hide the labels in the bottom tab bar
           tabBarStyle: {
             //set the background color for the tab bar
@@ -92,7 +95,7 @@ export default function MainNavigation() {
         />
         <Tab.Screen name={searchName} component={SearchScreen} />
         {/* <Tab.Screen name={settingsName} component={SettingsScreen} /> */}
-        <Tab.Screen name={savedName} component={BookmarksScreen} />
+        <Tab.Screen name={savedName}  component={BookmarksScreen} />
       </Tab.Navigator>
     </NavigationContainer>
   );
