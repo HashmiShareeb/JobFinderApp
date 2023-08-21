@@ -52,7 +52,7 @@ export default ({ item }: { item: Job }) => {
         >
           {item.title}
         </Text>
-        <Text numberOfLines={1} color={"gray.400"}>
+        <Text numberOfLines={1} color={"orange.400"}>
           {item.location}
         </Text>
       </VStack>

@@ -5,7 +5,7 @@
     "description": "We are seeking a skilled Software Engineer to join our development team...",
     "company_name": "Apple Inc.",
     "location": "Cupertino, CA",
-    "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Apple_logo_black.svg/1920px-Apple_logo_black.svg.png",
+    "logo": "https://upload.wikimedia.org/wikipedia/commons/a/ab/Apple-logo.png",
     "type": "Full-time",
     "applicationRequirements": [
       "Bachelor's degree in Computer Science or related field",
@@ -47,7 +47,7 @@
     "description": "Join our design team and create delightful user experiences...",
     "company_name": "Adobe Inc.",
     "location": "San Jose, CA",
-    "logo": "https://example.com/adobe-logo.png",
+    "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7b/Adobe_Systems_logo_and_wordmark.svg/800px-Adobe_Systems_logo_and_wordmark.svg.png",
     "type": "Part-time",
     "applicationRequirements": [
       "Strong portfolio showcasing UX design work",
@@ -103,7 +103,7 @@
     "description": "Join our mobile app development team and create innovative mobile applications...",
     "company_name": "Uber Technologies, Inc.",
     "location": "San Francisco, CA",
-    "logo": "https://example.com/uber-logo.png",
+    "logo": "https://upload.wikimedia.org/wikipedia/commons/c/cc/Uber_logo_2018.png",
     "type": "Full-time",
     "applicationRequirements": [
       "Proficiency in mobile app development frameworks (e.g., React Native, Flutter)",

@@ -16,6 +16,9 @@ export default () => {
         name="Overview"
         options={{
           headerShown: true,
+          headerStyle: {
+            backgroundColor: "#28272C",
+          },
           headerShadowVisible: false,
           headerTitle: "",
           headerLeft: () => <Logo />,
@@ -31,6 +34,12 @@ export default () => {
           headerShown: true,
           headerTitle: "Detail",
           headerTitleAlign: "center",
+          headerStyle: {
+            backgroundColor: "#28272C",
+          },
+          headerTitleStyle: {
+            color: "white",
+          },
         }}
       />
       <Stack.Screen
@@ -38,6 +47,13 @@ export default () => {
         component={SettingsStack}
         options={{
           headerShown: true,
+          headerStyle: {
+            backgroundColor: "#28272C",
+          },
+          headerTitleStyle: {
+            color: "white",
+          },
+          headerTintColor: "white",
           headerTitle: "Settings",
           headerTitleAlign: "center",
         }}

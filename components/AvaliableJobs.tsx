@@ -15,7 +15,7 @@ export default () => {
     <View>
       <Heading
         flexDirection={"row"}
-        color={"dark.200"}
+        color={"white"}
         fontWeight={"bold"}
         fontSize={"md"}
       >
@@ -47,7 +47,7 @@ export default () => {
                 {job.title}
               </Heading>
               <VStack flexDirection={"row"} mt={2}>
-                <Text numberOfLines={1} color={"gray.400"} fontWeight={"light"}>
+                <Text numberOfLines={1} color={"orange.400"} fontWeight={"light"}>
                   {job.company_name} -  {job.type}
                 </Text>
               </VStack>

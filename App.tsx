@@ -7,7 +7,7 @@ import theme from "./styles/theme";
 export default function App() {
   return (
     <NativeBaseProvider>
-      <StatusBar style="auto" />
+      <StatusBar style="light" />
       <MainNavigation />
     </NativeBaseProvider>
   );

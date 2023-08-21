@@ -17,7 +17,7 @@ export default () => {
       <View>
         <Heading
           flexDirection={"row"}
-          color={"dark.200"}
+          color={"white"}
           fontWeight={"bold"}
           fontSize={"md"}
         >
@@ -56,11 +56,7 @@ export default () => {
               //   </Heading>
               //   <Text numberOfLines={1}>{job.location}</Text>
               // </TouchableOpacity>
-              <PopulairJobCard
-                key={job.id}
-                item={job}
-               
-              />
+              <PopulairJobCard key={job.id} item={job} />
             ))}
           </ScrollView>
         </VStack>

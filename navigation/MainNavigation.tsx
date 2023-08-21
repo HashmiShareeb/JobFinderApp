@@ -27,15 +27,18 @@ export default function MainNavigation() {
       <Tab.Navigator
         initialRouteName={homeName}
         screenOptions={({ route }) => ({
-          tabBarInactiveTintColor: "black", //inactive icon color
-          tabBarActiveTintColor: "white", //active icon color
-          headerStyle :{
-            backgroundColor: "tomato",
+          tabBarInactiveTintColor: "white", //inactive icon color
+          tabBarActiveTintColor: "tomato", //active icon color
+          headerTintColor: "white",
+          headerTitleAlign: "center",
+          headerStyle: {
+            backgroundColor: "#28272C",
           },
           tabBarShowLabel: false, //hide the labels in the bottom tab bar
           tabBarStyle: {
             //set the background color for the tab bar
-            backgroundColor: "tomato",
+            backgroundColor: "#28272C",
+            borderTopWidth: 0,
           },
           labelStyle: {
             paddingBottom: 10,
@@ -58,44 +61,14 @@ export default function MainNavigation() {
           },
         })}
       >
-        {/* <Tab.Navigator
-        initialRouteName={homeName}
-        screenOptions={({ route }) => ({
-          tabBarIcon: ({ focused, color, size }) => {
-            let iconName: string = "";
-            if (route.name === homeName) {
-              iconName = focused ? "ios-home" : "ios-home-outline";
-            } else if (route.name === searchName) {
-              iconName = focused ? "ios-search" : "ios-search-outline";
-            } else if (route.name === "Bookmarks") {
-              iconName = focused ? "ios-bookmark" : "ios-bookmark-outline";
-            }
-
-            // Add a fallback value in case iconName is empty or undefined
-            iconName = iconName || "default-icon";
-
-            return <Ionicons name={iconName} size={size} color={color} />;
-          },
-        })}
-        tabBarOptions={{
-          activeTintColor: "tomato",
-          inactiveTintColor: "grey",
-          labelStyle: {
-            paddingBottom: 10,
-          },
-          style: {
-            backgroundColor: "red", // Set the desired background color
-          },
-        }}
-      > */}
         <Tab.Screen
           name={homeName}
           options={{ headerShown: false }}
           component={MainStack}
         />
-        <Tab.Screen name={searchName} component={SearchScreen} />
+        {/* <Tab.Screen name={searchName} component={SearchScreen} /> */}
         {/* <Tab.Screen name={settingsName} component={SettingsScreen} /> */}
-        <Tab.Screen name={savedName}  component={BookmarksScreen} />
+        <Tab.Screen name={savedName} component={BookmarksScreen} />
       </Tab.Navigator>
     </NavigationContainer>
   );

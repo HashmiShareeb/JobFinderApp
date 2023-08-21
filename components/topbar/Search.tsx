@@ -10,11 +10,12 @@ export default () => {
   const navigation = useNavigation();
   return (
     //navigate to settingsscreen on press
-    //use touchableopacity to make the icon clickable
+    //use touchableopacity to make the icon
+    //@ts-ignore
     <TouchableOpacity onPress={() => navigation.navigate("settings")}>
       <VStack>
         <Box mx={5}>
-          <Ionicons name="ios-settings" size={24} color="black" />
+          <Ionicons name="ios-search" size={24} color="orange" />
         </Box>
       </VStack>
     </TouchableOpacity>
