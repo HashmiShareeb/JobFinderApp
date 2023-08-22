@@ -65,7 +65,7 @@
     "description": "We are seeking an experienced Product Manager to drive product strategy...",
     "company_name": "Amazon.com, Inc.",
     "location": "Seattle, WA",
-    "logo": "assets/MSFT.png",
+    "logo": "",
     "type": "Full-time",
     "applicationRequirements": [
       "Proven track record of successfully launching products",
@@ -125,7 +125,7 @@
     "description": "We are seeking a skilled DevOps Engineer to streamline our software development processes...",
     "company_name": "Spotify AB",
     "location": "Stockholm, Sweden",
-    "logo": "https://example.com/spotify-logo.png",
+    "logo": "",
     "type": "Part-time",
     "applicationRequirements": [
       "Experience with CI/CD pipelines and deployment automation",

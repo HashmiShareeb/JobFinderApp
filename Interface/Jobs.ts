@@ -7,4 +7,5 @@ export interface Job {
   location: string;
   date: string;
   description: string;
+  isBookmarked: boolean;
 }

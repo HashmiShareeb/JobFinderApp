@@ -6,24 +6,35 @@ import { Bookmark } from "lucide-react-native";
 import { Ionicons } from "@expo/vector-icons";
 import { TouchableOpacity } from "react-native-gesture-handler";
 import { useState } from "react";
+import jobsData from "../../assets/data/jobs.json";
 
 export default ({ navigation, route }: { navigation: any; route: any }) => {
   const handleApply = () => {
     // Perform action for applying to the job
   };
-  //bookmark usestate
-  const [bookmark, setBookmark] = useState(false);
-  const handleBookmark = () => {
-    console.log("bookmarked");
-    setBookmark((Job: any) => ({ ...Job, isBookmarked: !Job.isBookmarked }));
-  };
-
   const { job } = route.params;
+
+  const [isBookmarked, setIsBookmarked] = useState(job.isBookmarked || false);
+
+  const handleBookmark = () => {
+    const updatedJob = { ...job, isBookmarked: !isBookmarked };
+
+    // Find the index of the updated job in the jobsData array
+    const jobIndex = jobsData.findIndex((item) => item.id === job.id);
+
+    if (jobIndex !== -1) {
+      // Update the job in the jobsData array
+      jobsData[jobIndex] = updatedJob;
+
+      // Update the state to reflect the change
+      setIsBookmarked(!isBookmarked);
+    }
+  };
   return (
     <VStack flex={1} alignItems="center" style={theme.bgDark}>
       <Image
         mt={8}
-        width={50}        
+        width={50}
         height={50}
         source={{
           uri: job.logo
@@ -74,7 +85,7 @@ export default ({ navigation, route }: { navigation: any; route: any }) => {
         {/* <Button title="apply" onPress={handleApply} /> */}
         <TouchableOpacity onPress={handleBookmark}>
           <Ionicons
-            name={bookmark.isBookmarked ? "bookmark" : "bookmark-outline"}
+            name={isBookmarked ? "bookmark" : "bookmark-outline"}
             size={20}
             color={"white"}
           />
