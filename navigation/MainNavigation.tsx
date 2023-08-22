@@ -1,16 +1,11 @@
 import * as React from "react";
-import { View, Text } from "react-native";
 
 // react navigation
 import { NavigationContainer } from "@react-navigation/native";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { Ionicons } from "@expo/vector-icons";
 // screens
-import SettingsScreen from "./screens/SettingsScreen";
-import SearchScreen from "./screens/SearchScreen";
-import HomeScreen from "./screens/HomeScreen";
-import DetailStack from "./stacked/DetailStack";
-import { Header, createStackNavigator } from "@react-navigation/stack";
+import { createStackNavigator } from "@react-navigation/stack";
 import MainStack from "./stacked/MainStack";
 import BookmarksScreen from "./screens/BookmarksScreen";
 
@@ -32,12 +27,12 @@ export default function MainNavigation() {
           headerTintColor: "white",
           headerTitleAlign: "center",
           headerStyle: {
-            backgroundColor: "#28272C",
+            backgroundColor: "#1D1D1D",
           },
           tabBarShowLabel: false, //hide the labels in the bottom tab bar
           tabBarStyle: {
             //set the background color for the tab bar
-            backgroundColor: "#28272C",
+            backgroundColor: "#1D1D1D",
             borderTopWidth: 0,
           },
           labelStyle: {
@@ -51,7 +46,7 @@ export default function MainNavigation() {
             } else if (route.name === searchName) {
               iconName = focused ? "ios-search" : "ios-search-outline";
             } else if (route.name === "Bookmarks") {
-              iconName = focused ? "ios-bookmark" : "ios-bookmark-outline";
+              iconName = focused ? "ios-bookmarks" : "ios-bookmarks-outline";
             }
 
             // Add a fallback value in case iconName is empty or undefined
@@ -66,8 +61,6 @@ export default function MainNavigation() {
           options={{ headerShown: false }}
           component={MainStack}
         />
-        {/* <Tab.Screen name={searchName} component={SearchScreen} /> */}
-        {/* <Tab.Screen name={settingsName} component={SettingsScreen} /> */}
         <Tab.Screen name={savedName} component={BookmarksScreen} />
       </Tab.Navigator>
     </NavigationContainer>

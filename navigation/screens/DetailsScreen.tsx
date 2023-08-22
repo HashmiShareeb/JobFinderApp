@@ -1,27 +1,29 @@
-import { Button, Image, VStack, Text, HStack, Center } from "native-base";
+import { Image, VStack, Text, HStack, Center, Icon, Box } from "native-base";
+import { Button } from "react-native";
 import * as React from "react";
 import theme from "../../styles/theme";
+import { Bookmark } from "lucide-react-native";
+import { Ionicons } from "@expo/vector-icons";
+import { TouchableOpacity } from "react-native-gesture-handler";
+import { useState } from "react";
 
 export default ({ navigation, route }: { navigation: any; route: any }) => {
   const handleApply = () => {
     // Perform action for applying to the job
   };
-
-  //placeholder image
+  //bookmark usestate
+  const [bookmark, setBookmark] = useState(false);
+  const handleBookmark = () => {
+    console.log("bookmarked");
+    setBookmark((Job: any) => ({ ...Job, isBookmarked: !Job.isBookmarked }));
+  };
 
   const { job } = route.params;
   return (
     <VStack flex={1} alignItems="center" style={theme.bgDark}>
-      {/* <Image
-        mt={8}
-        source={job.logo ? getLogoFromFileName(job.logo) : placeholderImage}
-        style={{ width: 200, height: 200 }} // Adjust the width and height as needed
-        resizeMode="contain" // Adjust the resizeMode if necessary
-        alt="Job Image"
-      /> */}
       <Image
         mt={8}
-        width={50}
+        width={50}        
         height={50}
         source={{
           uri: job.logo
@@ -62,9 +64,22 @@ export default ({ navigation, route }: { navigation: any; route: any }) => {
           {job.applicationRequirements}
         </Text>
       </VStack>
-      <Button width="80%" marginBottom={4} onPress={handleApply}>
-        Apply
-      </Button>
+      <Box
+        flexDirection={"row"}
+        flexBasis={"auto"}
+        mx={4}
+        mb={4}
+        justifyContent={"space-between"}
+      >
+        {/* <Button title="apply" onPress={handleApply} /> */}
+        <TouchableOpacity onPress={handleBookmark}>
+          <Ionicons
+            name={bookmark.isBookmarked ? "bookmark" : "bookmark-outline"}
+            size={20}
+            color={"white"}
+          />
+        </TouchableOpacity>
+      </Box>
     </VStack>
   );
 };

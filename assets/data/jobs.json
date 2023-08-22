@@ -11,7 +11,8 @@
       "Bachelor's degree in Computer Science or related field",
       "Strong proficiency in JavaScript and modern frameworks",
       "Experience with Agile development methodologies"
-    ]
+    ],
+    "isBookmarked": false
   },
   {
     "id": 2,
@@ -25,7 +26,8 @@
       "Proficiency in HTML, CSS, and JavaScript",
       "Experience with React and state management libraries",
       "Understanding of responsive web design principles"
-    ]
+    ],
+    "isBookmarked": false
   },
   {
     "id": 3,
@@ -39,7 +41,8 @@
       "Master's or Ph.D. degree in Data Science or related field",
       "Proficiency in statistical analysis and machine learning techniques",
       "Experience with Python and data manipulation libraries"
-    ]
+    ],
+    "isBookmarked": false
   },
   {
     "id": 4,
@@ -53,7 +56,8 @@
       "Strong portfolio showcasing UX design work",
       "Proficiency in design software such as Sketch or Figma",
       "Understanding of user-centered design principles"
-    ]
+    ],
+    "isBookmarked": false
   },
   {
     "id": 5,
@@ -67,7 +71,8 @@
       "Proven track record of successfully launching products",
       "Strong analytical and problem-solving skills",
       "Experience with Agile development methodologies"
-    ]
+    ],
+    "isBookmarked": false
   },
   {
     "id": 6,
@@ -81,7 +86,8 @@
       "Proficiency in server-side programming languages (e.g., Java, Python)",
       "Experience with distributed systems and microservices architecture",
       "Understanding of cloud computing platforms (e.g., AWS, GCP)"
-    ]
+    ],
+    "isBookmarked": false
   },
   {
     "id": 7,
@@ -95,7 +101,8 @@
       "Strong SQL skills and experience with data querying",
       "Proficiency in data visualization tools (e.g., Tableau, Power BI)",
       "Ability to analyze and interpret complex data sets"
-    ]
+    ],
+    "isBookmarked": false
   },
   {
     "id": 8,
@@ -109,7 +116,8 @@
       "Proficiency in mobile app development frameworks (e.g., React Native, Flutter)",
       "Experience with iOS or Android app development",
       "Understanding of mobile UI/UX principles"
-    ]
+    ],
+    "isBookmarked": false
   },
   {
     "id": 9,
@@ -123,7 +131,8 @@
       "Experience with CI/CD pipelines and deployment automation",
       "Proficiency in cloud platforms (e.g., AWS, Azure)",
       "Strong understanding of containerization (e.g., Docker, Kubernetes)"
-    ]
+    ],
+    "isBookmarked": false
   },
   {
     "id": 10,
@@ -137,6 +146,7 @@
       "Ph.D. degree in Computer Science or related field",
       "Expertise in machine learning, deep learning, and statistical modeling",
       "Strong programming skills in languages like Python or R"
-    ]
+    ],
+    "isBookmarked": false
   }
 ]

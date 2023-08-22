@@ -5,6 +5,7 @@ import PopulairJobCard from "./PopulairJobCard";
 import { useNavigation } from "@react-navigation/native";
 //import json file
 import jobsData from "../assets/data/jobs.json";
+//import theme styles
 import theme from "../styles/theme";
 
 const isLoading = false;
@@ -46,31 +47,11 @@ export default () => {
           {/* search job */}
           <ScrollView horizontal={true} showsHorizontalScrollIndicator={false}>
             {jobsData.map((job) => (
-              // <TouchableOpacity
-              //   style={jobcards.container}
-              //   key={job.id}
-              //   onPress={() => navigation.navigate("Details", { job })}
-              // >
-              //   <Heading color={"dark.100"} fontWeight={"medium"} fontSize={"md"}>
-              //     {job.title}
-              //   </Heading>
-              //   <Text numberOfLines={1}>{job.location}</Text>
-              // </TouchableOpacity>
               <PopulairJobCard key={job.id} item={job} />
             ))}
           </ScrollView>
         </VStack>
       </View>
-
-      {/* <Heading size="lg" color="dark.100" mb={2}>
-        Populair Jobs
-      </Heading>
-      <TouchableOpacity style={jobcards.container}>
-        <Heading color="dark.100" size="md">
-          {jobsData[0].title}
-        </Heading>
-        <Text numberOfLines={1}>{jobsData[1].location}</Text>
-      </TouchableOpacity> */}
     </VStack>
   );
 };

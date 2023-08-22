@@ -4,7 +4,7 @@ import { Ionicons } from "@expo/vector-icons";
 import { TouchableOpacity } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 import SettingsScreen from "../../navigation/screens/SettingsScreen";
-import SettingsStack from "../../navigation/stacked/SettingsStack";
+import SettingsStack from "../../navigation/stacked/SearchStack";
 
 export default () => {
   const navigation = useNavigation();

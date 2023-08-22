@@ -7,11 +7,13 @@ import {
   TouchableOpacity,
 } from "react-native";
 import searchInput from "../../styles/searchInput";
-import { VStack } from "native-base";
+import { Box, VStack } from "native-base";
+import { Ionicons } from "@expo/vector-icons";
 //import json
 import jobsData from "../../assets/data/jobs.json";
 import theme from "../../styles/theme";
 import { useNavigation } from "@react-navigation/native";
+import { Keyboard } from "react-native";
 
 export default () => {
   const [searchText, setSearchText] = useState("");
@@ -26,29 +28,41 @@ export default () => {
 
   const handleCancel = () => {
     setSearchText("");
-    // Hide the keyboard or perform any other desired action
+    setSearchText("");
+    setSearchResults([]);
+    Keyboard.dismiss();
   };
   const navigation = useNavigation();
   return (
     <VStack p={3} style={theme.bgDark} flex={1}>
-      <TextInput
-        style={[searchInput.searchBar, theme.bgDarkCard, theme.textWhite]}
-        // style={{ height: 40, borderColor: "gray", borderWidth: 1, padding: 10 }}
-        placeholder="Search Jobs"
-        placeholderTextColor={"#999"}
-        value={searchText}
-        onChangeText={(text) => setSearchText(text)}
-        onSubmitEditing={handleSearch}
-        blurOnSubmit={true} // Add this line to dismiss the keyboard on submit
-      />
-      {searchText.length > 0 && (
-        <TouchableOpacity onPress={handleCancel}>
-          <Text style={theme.textWhite}>Cancel</Text>
-        </TouchableOpacity>
-      )}
+      <Box flexDirection={"row"} position={"relative"}>
+        <TextInput
+          style={[searchInput.searchBar, theme.bgDarkCard, theme.textWhite]}
+          placeholder="Search Jobs"
+          placeholderTextColor={"#999"}
+          value={searchText}
+          onChangeText={(text) => setSearchText(text)}
+          onSubmitEditing={handleSearch}
+          blurOnSubmit={true}
+        />
+        {searchText.length > 0 && (
+          <TouchableOpacity onPress={handleCancel}>
+            <Ionicons
+              name="close"
+              size={20}
+              fontweight={"bold"}
+              color={"white"}
+              position="absolute"
+              right={10}
+              top={20}
+            />
+          </TouchableOpacity>
+        )}
+      </Box>
+
       <FlatList
         data={searchResults}
-        keyExtractor={(item) => item.id.toString()}
+        keyExtractor={(job) => job}
         renderItem={({ item }) => (
           <VStack my={5}>
             <TouchableOpacity

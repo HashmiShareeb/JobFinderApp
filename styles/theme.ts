@@ -5,10 +5,11 @@ export default StyleSheet.create({
     backgroundColor: "#000",
   },
   headerandfooter: {
-    backgroundColor: "#28272C",
+    backgroundColor: "#1D1D1D",
   },
   bgDarkCard: {
-    backgroundColor: "#1D1D1D",
+    //backgroundColor: "#1D1D1D",
+    backgroundColor: "#28272C",
   },
   textWhite: {
     color: "#f1f1f3",

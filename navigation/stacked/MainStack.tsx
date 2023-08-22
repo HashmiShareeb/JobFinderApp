@@ -5,7 +5,7 @@ import React from "react";
 import Logo from "../../components/topbar/Logo";
 import DetailsScreen from "../screens/DetailsScreen";
 import Search from "../../components/topbar/Search";
-import SettingsStack from "./SettingsStack";
+import SettingsStack from "./SearchStack";
 
 const Stack = createStackNavigator();
 
@@ -17,7 +17,7 @@ export default () => {
         options={{
           headerShown: true,
           headerStyle: {
-            backgroundColor: "#28272C",
+            backgroundColor: "#1D1D1D",
           },
           headerShadowVisible: false,
           headerTitle: "",
@@ -31,11 +31,12 @@ export default () => {
         name="Details"
         component={DetailsScreen}
         options={{
+          headerTintColor: "white",
           headerShown: true,
           headerTitle: "Detail",
           headerTitleAlign: "center",
           headerStyle: {
-            backgroundColor: "#28272C",
+            backgroundColor: "#1D1D1D",
           },
           headerTitleStyle: {
             color: "white",
@@ -48,13 +49,13 @@ export default () => {
         options={{
           headerShown: true,
           headerStyle: {
-            backgroundColor: "#28272C",
+            backgroundColor: "#1D1D1D",
           },
           headerTitleStyle: {
             color: "white",
           },
           headerTintColor: "white",
-          headerTitle: "Settings",
+          headerTitle: "Search",
           headerTitleAlign: "center",
         }}
       />
