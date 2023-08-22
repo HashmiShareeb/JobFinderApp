@@ -15,7 +15,7 @@ import { useState } from "react";
 import jobsData from "../../assets/data/jobs.json";
 import CheckImage from "../../Utilities/CheckImage";
 import { Scroll } from "lucide-react-native";
-import ApplyBtn from "../../components/ApplyBtn";
+import ApplyBtn from "../../components/footer/ApplyBtn";
 
 export default ({ navigation, route }: { navigation: any; route: any }) => {
   const handleApply = () => {
