@@ -15,6 +15,7 @@ import { useState } from "react";
 import jobsData from "../../assets/data/jobs.json";
 import CheckImage from "../../Utilities/CheckImage";
 import { Scroll } from "lucide-react-native";
+import ApplyBtn from "../../components/ApplyBtn";
 
 export default ({ navigation, route }: { navigation: any; route: any }) => {
   const handleApply = () => {
@@ -107,17 +108,18 @@ export default ({ navigation, route }: { navigation: any; route: any }) => {
       <Box
         flexDirection={"row"}
         alignItems={"center"}
-        mb={1}
-        p={2}
+        mt={1}
+        p={5}
+        width={"112%"}
         justifyContent={"space-evenly"}
       >
-        <Button bgColor={"orange.600"} width="70%" mx={4} onPress={handleApply}>
-          Apply Now
-        </Button>
+        <ApplyBtn
+          url={job.apply_link ?? "http:/careers.google.com/jobs/results"}
+        />
         <TouchableOpacity onPress={handleBookmark}>
           <Ionicons
             name={isBookmarked ? "bookmark" : "bookmark-outline"}
-            size={20}
+            size={36}
             color={"white"}
           />
         </TouchableOpacity>

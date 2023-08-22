@@ -13,7 +13,8 @@
       "Strong proficiency in JavaScript and modern frameworks",
       "Experience with Agile development methodologies"
     ],
-    "isBookmarked": true
+    "isBookmarked": true,
+    "apply_link": "https://jobs.apple.com/en-us/details/200200438/software-engineer-apple-pay"
   },
   {
     "id": 2,
@@ -29,7 +30,8 @@
       "Experience with React and state management libraries",
       "Understanding of responsive web design principles"
     ],
-    "isBookmarked": true
+    "isBookmarked": true,
+    "apply_link": "https://careers.google.com/jobs/results/129383753590278854-software-engineer/"
   },
   {
     "id": 3,
@@ -45,7 +47,8 @@
       "Proficiency in statistical analysis and machine learning techniques",
       "Experience with Python and data manipulation libraries"
     ],
-    "isBookmarked": false
+    "isBookmarked": false,
+    "apply_link": "https://careers.microsoft.com/us/en/job/1016290/Principal-Data-Scientist"
   },
   {
     "id": 4,
@@ -61,7 +64,8 @@
       "Proficiency in design software such as Sketch or Figma",
       "Understanding of user-centered design principles"
     ],
-    "isBookmarked": false
+    "isBookmarked": false,
+    "apply_link": "https://www.adobe.com/careers.html"
   },
   {
     "id": 5,
@@ -77,7 +81,8 @@
       "Strong analytical and problem-solving skills",
       "Experience with Agile development methodologies"
     ],
-    "isBookmarked": false
+    "isBookmarked": false,
+    "apply_link": "https://www.amazon.jobs/en/jobs"
   },
   {
     "id": 6,
@@ -93,13 +98,14 @@
       "Experience with distributed systems and microservices architecture",
       "Understanding of cloud computing platforms (e.g., AWS, GCP)"
     ],
-    "isBookmarked": false
+    "isBookmarked": false,
+    "apply_link": "https://www.netflix.com/jobs"
   },
   {
     "id": 7,
     "title": "Data Analyst",
     "description": "We are looking for a detail-oriented Data Analyst to extract insights from data...",
-    "company_name": "Facebook, Inc.",
+    "company_name": "Meta Platforms, Inc.",
     "location": "Menlo Park, CA",
     "logo": "https://upload.wikimedia.org/wikipedia/commons/c/cd/Facebook_logo_%28square%29.png",
     "type": "Contract",
@@ -109,7 +115,8 @@
       "Proficiency in data visualization tools (e.g., Tableau, Power BI)",
       "Ability to analyze and interpret complex data sets"
     ],
-    "isBookmarked": false
+    "isBookmarked": false,
+    "apply_link": "https://www.metacareers.com/"
   },
   {
     "id": 8,
@@ -125,7 +132,8 @@
       "Experience with iOS or Android app development",
       "Understanding of mobile UI/UX principles"
     ],
-    "isBookmarked": false
+    "isBookmarked": false,
+    "apply_link": "https://www.uber.com/be/en/drive/"
   },
   {
     "id": 9,
@@ -141,7 +149,8 @@
       "Proficiency in cloud platforms (e.g., AWS, Azure)",
       "Strong understanding of containerization (e.g., Docker, Kubernetes)"
     ],
-    "isBookmarked": false
+    "isBookmarked": false,
+    "apply_link": "https://www.lifeatspotify.com/how-we-hire"
   },
   {
     "id": 10,
@@ -157,6 +166,7 @@
       "Expertise in machine learning, deep learning, and statistical modeling",
       "Strong programming skills in languages like Python or R"
     ],
-    "isBookmarked": false
+    "isBookmarked": false,
+    "apply_link": "https://careers.ibm.com/ShowJob/Id/1234567/AI-Research-Scientist/"
   }
 ]

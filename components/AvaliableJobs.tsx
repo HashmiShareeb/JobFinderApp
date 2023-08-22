@@ -33,15 +33,16 @@ export default () => {
               <Heading
                 style={theme.textWhite}
                 fontWeight={"bold"}
-                fontSize={"md"}
+                fontSize={16}
               >
                 {job.title}
               </Heading>
               <VStack flexDirection={"row"} mt={2}>
                 <Text
                   numberOfLines={1}
-                  color={"tomato"}
+                  color={"white"}
                   fontWeight={"light"}
+                  fontSize={14}
                 >
                   {job.company_name} - {job.type}
                 </Text>
