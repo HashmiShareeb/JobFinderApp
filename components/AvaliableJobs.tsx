@@ -30,25 +30,20 @@ export default () => {
               //@ts-ignore
               onPress={() => navigation.navigate("Details", { job })}
             >
-              {/* <Image
-                source={{ uri: job.logo }} // Assuming "logo" property contains the image URI
-                alt={job.title} // Alt text for the image
-                resizeMode="contain"
-                mt={8}
-                width={50}
-                height={50}
-              /> */}
-
               <Heading
                 style={theme.textWhite}
-                fontWeight={'regular'}
+                fontWeight={"bold"}
                 fontSize={"md"}
               >
                 {job.title}
               </Heading>
               <VStack flexDirection={"row"} mt={2}>
-                <Text numberOfLines={1} color={"orange.400"} fontWeight={"light"}>
-                  {job.company_name} -  {job.type}
+                <Text
+                  numberOfLines={1}
+                  color={"tomato"}
+                  fontWeight={"light"}
+                >
+                  {job.company_name} - {job.type}
                 </Text>
               </VStack>
             </TouchableOpacity>

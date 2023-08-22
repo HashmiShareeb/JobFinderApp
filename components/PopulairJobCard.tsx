@@ -28,7 +28,7 @@ export default ({ item }: { item: Job }) => {
           //   uri: "https://t4.ftcdn.net/jpg/05/05/61/73/360_F_505617309_NN1CW7diNmGXJfMicpY9eXHKV4sqzO5H.jpg",
           // }}
           source={{
-            uri: item.logo
+            uri: CheckImage(item.logo)
               ? item.logo
               : "https://t4.ftcdn.net/jpg/05/05/61/73/360_F_505617309_NN1CW7diNmGXJfMicpY9eXHKV4sqzO5H.jpg",
           }}
@@ -52,7 +52,7 @@ export default ({ item }: { item: Job }) => {
         >
           {item.title}
         </Text>
-        <Text numberOfLines={1} color={"orange.400"}>
+        <Text numberOfLines={1} color={"tomato"}>
           {item.location}
         </Text>
       </VStack>

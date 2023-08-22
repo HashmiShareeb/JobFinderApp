@@ -17,4 +17,7 @@ export default StyleSheet.create({
   darkText: {
     backgroundColor: "#000",
   },
+  imageContainerColor: {
+    backgroundColor: "#1D1D1D",
+  },
 });

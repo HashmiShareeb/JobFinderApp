@@ -5,7 +5,7 @@ export default () => {
   return (
     <View>
       <VStack width={"100%"}>
-        <Heading color="orange.400" fontWeight="semibold" size="lg">
+        <Heading color={"tomato"} fontWeight="semibold" size="lg">
           Find your ideal job
         </Heading>
       </VStack>

@@ -1,12 +1,20 @@
-import { Image, VStack, Text, HStack, Center, Icon, Box } from "native-base";
-import { Button } from "react-native";
+import {
+  Image,
+  VStack,
+  Text,
+  HStack,
+  Box,
+  Button,
+  ScrollView,
+} from "native-base";
 import * as React from "react";
 import theme from "../../styles/theme";
-import { Bookmark } from "lucide-react-native";
 import { Ionicons } from "@expo/vector-icons";
 import { TouchableOpacity } from "react-native-gesture-handler";
 import { useState } from "react";
 import jobsData from "../../assets/data/jobs.json";
+import CheckImage from "../../Utilities/CheckImage";
+import { Scroll } from "lucide-react-native";
 
 export default ({ navigation, route }: { navigation: any; route: any }) => {
   const handleApply = () => {
@@ -32,57 +40,80 @@ export default ({ navigation, route }: { navigation: any; route: any }) => {
   };
   return (
     <VStack flex={1} alignItems="center" style={theme.bgDark}>
-      <Image
-        mt={8}
-        width={50}
-        height={50}
-        source={{
-          uri: job.logo
-            ? job.logo
-            : "https://t4.ftcdn.net/jpg/05/05/61/73/360_F_505617309_NN1CW7diNmGXJfMicpY9eXHKV4sqzO5H.jpg",
-        }}
-        alt="Job Image"
-        resizeMode="contain"
-      />
+      <Box backgroundColor={"gray.600"} width={100} m={8} borderRadius={8}>
+        <Image
+          mx={"auto"}
+          width={60}
+          height={100}
+          source={{
+            uri: CheckImage(job.logo)
+              ? job.logo
+              : "https://t4.ftcdn.net/jpg/05/05/61/73/360_F_505617309_NN1CW7diNmGXJfMicpY9eXHKV4sqzO5H.jpg",
+          }}
+          alt="Job Image"
+          resizeMode="contain"
+        />
+      </Box>
+      <Text
+        style={theme.textWhite}
+        fontWeight="bold"
+        fontSize="2xl"
+        marginBottom={2}
+        textAlign={"center"}
+      >
+        {job.title}
+      </Text>
+      <HStack space={2} alignItems={"center"}>
+        <Text fontSize="md" marginBottom={2} style={theme.textWhite}>
+          {job.company_name}
+        </Text>
+        <Text fontSize="md" marginBottom={2} style={theme.textWhite}>
+          {job.location}
+        </Text>
+      </HStack>
+      <ScrollView>
+        <VStack
+          padding={4}
+          mt={5}
+          borderTopColor={"gray.400"}
+          borderTopWidth={1}
+        >
+          <Text
+            fontSize="md"
+            fontWeight={"bold"}
+            textTransform={"capitalize"}
+            style={theme.textWhite}
+          >
+            description
+          </Text>
+          <Text fontSize="md" style={theme.textWhite}>
+            {job.details}
+          </Text>
+          <Text
+            fontSize="md"
+            fontWeight={"bold"}
+            textTransform={"capitalize"}
+            style={theme.textWhite}
+            mt={4}
+          >
+            requirements
+          </Text>
+          <Text fontSize="md" style={theme.textWhite}>
+            {job.applicationRequirements}
+          </Text>
+        </VStack>
+      </ScrollView>
 
-      <VStack padding={4}>
-        <Text
-          style={theme.textWhite}
-          fontWeight="bold"
-          fontSize="xl"
-          marginBottom={2}
-          textAlign={"center"}
-        >
-          {job.title}
-        </Text>
-        <HStack space={2} margin={"auto"} alignItems={"center"}>
-          <Text fontSize="md" marginBottom={2} style={theme.textWhite}>
-            {job.company_name}
-          </Text>
-          <Text fontSize="sm" marginBottom={2} style={theme.textWhite}>
-            {job.location}
-          </Text>
-        </HStack>
-        <Text
-          fontSize="md"
-          fontWeight={"bold"}
-          textTransform={"capitalize"}
-          style={theme.textWhite}
-        >
-          description
-        </Text>
-        <Text fontSize="md" style={theme.textWhite}>
-          {job.applicationRequirements}
-        </Text>
-      </VStack>
       <Box
         flexDirection={"row"}
-        flexBasis={"auto"}
-        mx={4}
-        mb={4}
-        justifyContent={"space-between"}
+        alignItems={"center"}
+        mb={1}
+        p={2}
+        justifyContent={"space-evenly"}
       >
-        {/* <Button title="apply" onPress={handleApply} /> */}
+        <Button bgColor={"orange.600"} width="70%" mx={4} onPress={handleApply}>
+          Apply Now
+        </Button>
         <TouchableOpacity onPress={handleBookmark}>
           <Ionicons
             name={isBookmarked ? "bookmark" : "bookmark-outline"}

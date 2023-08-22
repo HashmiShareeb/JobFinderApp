@@ -6,6 +6,7 @@ import Logo from "../../components/topbar/Logo";
 import DetailsScreen from "../screens/DetailsScreen";
 import Search from "../../components/topbar/Search";
 import SettingsStack from "./SearchStack";
+import SearchStack from "./SearchStack";
 
 const Stack = createStackNavigator();
 
@@ -44,8 +45,8 @@ export default () => {
         }}
       />
       <Stack.Screen
-        name="settings"
-        component={SettingsStack}
+        name="search"
+        component={SearchStack}
         options={{
           headerShown: true,
           headerStyle: {

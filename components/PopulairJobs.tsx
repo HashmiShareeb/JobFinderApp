@@ -22,29 +22,9 @@ export default () => {
           fontWeight={"bold"}
           fontSize={"md"}
         >
-          Popular Jobs
+          Populair Jobs
         </Heading>
         <VStack mt={2} ml={-3}>
-          {/* {isLoading ? (
-            <ActivityIndicator size="large" color="#0000ff" />
-          ) : error ? (
-            <Text>No data </Text>
-          ) : (
-            
-          )} */}
-
-          {/* <FlatList
-            data={jobsData}
-            renderItem={({ item }) => (
-              <PopulairJobCard
-                item={item}
-                onPress={() => navigation.navigate("Details")}
-              />
-            )}
-            horizontal
-          /> */}
-
-          {/* search job */}
           <ScrollView horizontal={true} showsHorizontalScrollIndicator={false}>
             {jobsData.map((job) => (
               <PopulairJobCard key={job.id} item={job} />

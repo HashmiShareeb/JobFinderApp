@@ -4,13 +4,8 @@ import react from "react";
 export default () => {
   return (
     <VStack>
-      <Heading
-        color={"white"}
-        fontSize={"2xl"}
-        fontWeight={"semibold"}
-        mx={5}
-      >
-        DevZone
+      <Heading color={"tomato"} fontSize={"2xl"} fontWeight={"semibold"} mx={5}>
+        CodeWave
       </Heading>
     </VStack>
   );

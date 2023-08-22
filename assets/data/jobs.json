@@ -7,12 +7,13 @@
     "location": "Cupertino, CA",
     "logo": "https://upload.wikimedia.org/wikipedia/commons/a/ab/Apple-logo.png",
     "type": "Full-time",
+    "details": "We are seeking a skilled Software Engineer to join our development team. You will be responsible for developing new features and improving existing ones. You will also be collaborating with designers and product managers to build new products and features.",
     "applicationRequirements": [
       "Bachelor's degree in Computer Science or related field",
       "Strong proficiency in JavaScript and modern frameworks",
       "Experience with Agile development methodologies"
     ],
-    "isBookmarked": false
+    "isBookmarked": true
   },
   {
     "id": 2,
@@ -22,12 +23,13 @@
     "location": "Mountain View, CA",
     "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Google_%22G%22_Logo.svg/1024px-Google_%22G%22_Logo.svg.png",
     "type": "Contract",
+    "details": "We are looking for a skilled Frontend Developer to join our engineering team. You will be responsible for developing user interfaces for web applications. You will also be collaborating with designers and backend developers to build new features and improve existing ones.",
     "applicationRequirements": [
       "Proficiency in HTML, CSS, and JavaScript",
       "Experience with React and state management libraries",
       "Understanding of responsive web design principles"
     ],
-    "isBookmarked": false
+    "isBookmarked": true
   },
   {
     "id": 3,
@@ -37,6 +39,7 @@
     "location": "Redmond, WA",
     "logo": "",
     "type": "Full-time",
+    "details": "We seek for a Data Scientist who can work complex data. You will be responsible for building machine learning models and communicating your findings to key stakeholders. You will also be collaborating with data engineers and software engineers to build data pipelines and AI-powered products.",
     "applicationRequirements": [
       "Master's or Ph.D. degree in Data Science or related field",
       "Proficiency in statistical analysis and machine learning techniques",
@@ -52,6 +55,7 @@
     "location": "San Jose, CA",
     "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7b/Adobe_Systems_logo_and_wordmark.svg/800px-Adobe_Systems_logo_and_wordmark.svg.png",
     "type": "Part-time",
+    "details": "Experienced UX Designer? Apply now!",
     "applicationRequirements": [
       "Strong portfolio showcasing UX design work",
       "Proficiency in design software such as Sketch or Figma",
@@ -67,6 +71,7 @@
     "location": "Seattle, WA",
     "logo": "",
     "type": "Full-time",
+    "details": "We are seeking an experienced Product Manager to drive product strategy. You will be responsible for defining product requirements and working with cross-functional teams to launch new products. You will also be collaborating with designers and engineers to improve existing products and features.",
     "applicationRequirements": [
       "Proven track record of successfully launching products",
       "Strong analytical and problem-solving skills",
@@ -80,8 +85,9 @@
     "description": "Join our backend engineering team and build scalable server applications...",
     "company_name": "Netflix, Inc.",
     "location": "Los Gatos, CA",
-    "logo": "",
-    "type": "Part-time",
+    "logo": "https://loodibee.com/wp-content/uploads/Netflix-N-Symbol-logo-black-bg-1000x1000.png",
+    "type": "Contract",
+    "details": "We are looking for a skilled Backend Developer to join our engineering team. You will be responsible for developing scalable server applications and maintaining the core backend infrastructure. You will also be collaborating with frontend developers and data scientists to build new features and improve existing ones.",
     "applicationRequirements": [
       "Proficiency in server-side programming languages (e.g., Java, Python)",
       "Experience with distributed systems and microservices architecture",
@@ -97,6 +103,7 @@
     "location": "Menlo Park, CA",
     "logo": "https://upload.wikimedia.org/wikipedia/commons/c/cd/Facebook_logo_%28square%29.png",
     "type": "Contract",
+    "details": "We are looking for a detail-oriented Data Analyst to extract insights from data. You will be responsible for analyzing large data sets and communicating your findings to key stakeholders. You will also be collaborating with data engineers and data scientists to build data pipelines and machine learning models.",
     "applicationRequirements": [
       "Strong SQL skills and experience with data querying",
       "Proficiency in data visualization tools (e.g., Tableau, Power BI)",
@@ -112,6 +119,7 @@
     "location": "San Francisco, CA",
     "logo": "https://upload.wikimedia.org/wikipedia/commons/c/cc/Uber_logo_2018.png",
     "type": "Full-time",
+    "details": "We are looking for a skilled Mobile App Developer to join our engineering team. You will be responsible for developing mobile applications for iOS and Android devices. You will also be collaborating with designers and backend developers to build new features and improve existing ones.",
     "applicationRequirements": [
       "Proficiency in mobile app development frameworks (e.g., React Native, Flutter)",
       "Experience with iOS or Android app development",
@@ -127,6 +135,7 @@
     "location": "Stockholm, Sweden",
     "logo": "",
     "type": "Part-time",
+    "details": "We are looking for a skilled DevOps Engineer to streamline our software development processes. You will be responsible for building and maintaining CI/CD pipelines and automating deployment processes. You will also be collaborating with software engineers and data scientists to improve our software development lifecycle.",
     "applicationRequirements": [
       "Experience with CI/CD pipelines and deployment automation",
       "Proficiency in cloud platforms (e.g., AWS, Azure)",
@@ -140,8 +149,9 @@
     "description": "Join our AI research team and contribute to cutting-edge machine learning algorithms...",
     "company_name": "IBM Corporation",
     "location": "New York, NY",
-    "logo": "https://upload.wikimedia.org/wikipedia/commons/5/51/IBM_logo.svg",
+    "logo": "",
     "type": "Full-time",
+    "details": "We are looking for a talented AI Research Scientist to join our research team. You will be responsible for developing cutting-edge machine learning algorithms and applying them to real-world problems. You will also be collaborating with data scientists and software engineers to build AI-powered products.",
     "applicationRequirements": [
       "Ph.D. degree in Computer Science or related field",
       "Expertise in machine learning, deep learning, and statistical modeling",
